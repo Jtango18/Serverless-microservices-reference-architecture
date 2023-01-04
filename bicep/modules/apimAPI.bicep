@@ -34,7 +34,7 @@ resource backendApi 'Microsoft.ApiManagement/service/backends@2021-01-01-preview
   name: backendApiName
   properties: {
     description: backendApiName
-    resourceId: 'https://management.azure.com${backendApiApp.id}'
+    resourceId: '{az.environment().resourceManager}${backendApiApp.id}'
     credentials: {
       header:{
         'x-functions-key': [
